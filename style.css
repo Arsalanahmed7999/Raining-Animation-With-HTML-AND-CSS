@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: url(bridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rain{
+    background: url(rain-png-45873.png);
+    min-height: 100vh;
+    width: 100vw;
+    animation: rain 0.7s linear infinite;
+}
+
+@keyframes rain {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -10% 100%;
+    }
+}
+
+.rain::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    animation: lighting 3s linear infinite;
+}
+
+
+@keyframes lighting {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    11%{
+        opacity: 1;
+    }
+    14%{
+        opacity: 0;
+    }
+    21%{
+        opacity: 1;
+    }
+    24%{
+        opacity: 0;
+    }
+    104%{
+        opacity: 0;
+    }
+}
